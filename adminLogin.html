@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-Konek Portal Admin - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Suez+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="adminLoginStyle.css">
+</head>
+
+<body>
+
+    <div class="login-card">
+        
+        <div class="header-container">
+            <div class="logo-circle">
+                <img src="https://i.postimg.cc/RV795PWZ/wifilogo.png" alt="Logo" class="logo-image">
+            </div>
+            <h1 class="brand-text">
+                <span>I-Konek</span>
+                <span>Portal Admin</span>
+            </h1>
+        </div>
+
+        <h2 class="sub-heading">Manage Your Network Gateways</h2>
+
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock-open icon-left"></i>
+                    <input type="password" id="password" name="password" placeholder="••••••••••••" required>
+                    <i class="fa-regular fa-eye icon-right" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <div class="form-helpers">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember">
+                    <span>Remember Session?</span>
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <div class="btn-submit-container">
+                <button type="submit" class="btn-submit">Log-In</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
