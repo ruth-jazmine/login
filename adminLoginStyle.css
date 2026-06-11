@@ -1,0 +1,209 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(41, 121, 194, 0.19);
+            font-family: 'Sudo Var', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .login-card {
+            background-color: rgba(235, 235, 235, 0.50);
+            width: 100%;
+            max-width: 540px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(41, 121, 194, 0.45);
+            padding: 40px;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            position: absolute;
+            top: -65px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        .logo-circle {
+            background: radial-gradient(circle, #102a45 0%, #031122 100%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(3, 17, 34, 0.4);
+            border: 2px solid #325d88;
+        }
+
+       .logo-image{
+        width: 120%;
+        height: 120%;
+        object-fit: contain;
+        filter: drop-shadow(0 0 8px rgba(85, 178, 255, 0.6));
+       }
+
+        .brand-text {
+            color: #011432;
+            font-family: 'Suez One', serif; 
+            font-size: 45px;
+            line-height: 1.1;
+        }
+
+        .brand-text span {
+            display: block;
+        }
+
+        .sub-heading {
+            color: #1C58AF;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-family: 'Suez One', serif;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #7c8e9f;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 10px 12px;
+            font-family: 'Sudo Var', monospace;
+            font-size: 16px;
+            border: none;
+            background: transparent;
+            outline: none;
+            color: #333;
+        }
+
+        .input-wrapper .icon-left {
+            padding-left: 12px;
+            color: #7c8e9f;
+        }
+
+        .input-wrapper .icon-right {
+            padding-right: 12px;
+            color: #7c8e9f;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .input-wrapper .icon-right:hover {
+            color: #17549c;
+        }
+
+        .input-wrapper input[name="password"] {
+            padding-left: 8px;
+        }
+
+        .form-helpers {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            margin-bottom: 35px;
+            font-size: 15px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .remember-me input {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: #0000FF;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-submit-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-submit {
+            background-color: #0f3160;
+            color: #ffffff;
+            border: none;
+            padding: 12px 50px;
+            font-family: 'Suez One', serif;
+            font-size: 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 1.0);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn-submit:hover {
+            background-color: #174582;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 520px) {
+            .header-container {
+                position: static;
+                margin-bottom: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .login-card {
+                margin-top: 20px;
+                padding: 25px 20px;
+            }
+            .sub-heading {
+                margin-top: 10px;
+            }
+            .form-helpers {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
